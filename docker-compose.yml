@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  schemaspy_ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DB_CONNECTOR: ${DB_CONNECTOR}
+        SCHEMA_SPY_URL: ${SCHEMA_SPY_URL}
+    container_name: schemaspy_ubuntu
+    volumes:
+      - ./output:/usr/local/output
+      - ./src:/usr/local/schemaspy
+    ports:
+      - "8000:80"
+    stdin_open: true
+    tty: true
