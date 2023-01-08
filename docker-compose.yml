@@ -16,3 +16,10 @@ services:
       - "8000:80"
     stdin_open: true
     tty: true
+  schamspy_python:
+    container_name: schamaspy_python
+    image: python:3.12-rc
+    volumes:
+      - .:/usr/local/schemaspy
+    stdin_open: true
+    tty: true
