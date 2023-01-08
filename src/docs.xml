@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no" ?>
 <!DOCTYPE doc [
-<!ENTITY orders SYSTEM "tables/orders.xml">
-<!ENTITY users SYSTEM "tables/users.xml">
+<!ENTITY orders SYSTEM "tables/xml/orders.xml">
+<!ENTITY users SYSTEM "tables/xml/users.xml">
 ]>
 <schemaMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schemaspy.org/xsd/6/schemameta.xsd" >
   <comments>Database comment</comments>
