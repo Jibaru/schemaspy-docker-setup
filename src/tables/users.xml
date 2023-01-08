@@ -1,3 +1,0 @@
-<table name="users" comments="This is the users table" >
-   <column name="uuid" comments="The users table identifier" />
-</table>

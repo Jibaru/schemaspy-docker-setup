@@ -1,3 +1,0 @@
-<table name="orders" comments="This is the orders table" >
-   <column name="uuid" comments="The orders table identifier" />
-</table>
