@@ -54,7 +54,7 @@ docker-compose up
 3. Access to the docker container throught bash terminal.
 
 ```bash
-docker exec -it schemaspy_ubuntu /bin/bash 
+docker exec -it schemaspy_ubuntu /bin/bash
 ```
 
 4. Run the following command.
@@ -77,3 +77,32 @@ docker exec schemaspy_ubuntu bash -c 'rm -r output/* && java -Djavax.xml.accessE
 - [Java 8.0](https://openjdk.org/projects/jdk8/)
 - [Graphviz](http://www.graphviz.org/download/)
 - Jar Connectors to DB.
+
+# How to add documentation for new table?
+
+1. Create a json file in `src/tables/json/es` with the name of table using _lower_snake_case_.
+2. Complete the json file using the schema provided.
+
+```json
+{
+  "name": "name_of_the_table_using_snake_case",
+  "comments": "...",
+  "columns": [
+    {
+      "name": "...",
+      "type": "...",
+      "comments": "..."
+    },
+    ...
+  ]
+}
+```
+
+3. Go to `src/docs.xml` and at the next entry following keep the asc order.
+
+```xml
+<!ENTITY name_of_the_table_using_snake_case SYSTEM "tables/xml/es/name_of_the_table_using_snake_case.xml">
+```
+
+4. Run the script `sudo sh ./start.sh`, or use the commands inside it.
+5. Upload the changes in a new pull request. Check the past pull requests to use the same structure.
