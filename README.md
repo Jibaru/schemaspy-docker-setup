@@ -1,3 +1,5 @@
+![SchemaSpy Docker Setup](./img/banner.png)
+
 # SchemaSpy Docker Setup
 
 Simple configuration to run SchemaSpy using docker.
