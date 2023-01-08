@@ -73,14 +73,14 @@ rm -r output/* && java -Djavax.xml.accessExternalDTD=all -jar schemaspy-exec.jar
 docker exec schemaspy_ubuntu bash -c 'rm -r output/* && java -Djavax.xml.accessExternalDTD=all -jar schemaspy-exec.jar -configFile schemaspy/schemaspy.properties'
 ```
 
-# Dependencies Information
+## Dependencies Information
 
 - [Schemaspy 6.1.0](https://schemaspy.readthedocs.io/en/v6.1.0/new.html)
 - [Java 8.0](https://openjdk.org/projects/jdk8/)
 - [Graphviz](http://www.graphviz.org/download/)
 - Jar Connectors to DB.
 
-# How to add documentation for new table?
+## How to add documentation for new table?
 
 1. Create a json file in `src/tables/json/es` with the name of table using _lower_snake_case_.
 2. Complete the json file using the schema provided.
